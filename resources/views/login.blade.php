@@ -11,7 +11,7 @@
                             Bienvenido a Workana!
                         </h1>
                         <span class="description">
-                            Ingresa para publicar los proyectos que desees en busca de un freelancer que te ayude o encargate de desarrollar proyectos publicados. 
+                            Ingresa para publicar los tus proyectos en busca de un freelancer o encargate de desarrollar proyectos que sean publicados. 
                         </span>
                     </div>
                 </div>
@@ -25,25 +25,24 @@
                         </a>
                     </div>
                     <h3>Iniciar Sesion</h3>
-                    <form>
+                    <form action="/" method="POST">
+                        {{csrf_field()}}
                         <div class="group material-input">
-                            <input type="text" required>
+                            <input type="text" name="usuario" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Usuario</label>
                         </div>
                         <div class="group material-input">
-                            <input type="password" required>
+                            <input type="password" name="password" required>
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label>Contraseña</label>
                         </div>
+                        <div class="sign-btn text-center">
+                            <input type="submit" class="btn btn-lg btn-gradient-01" value="Acceder">
+                        </div>    
                     </form>
-                    <div class="sign-btn text-center">
-                        <a href="db-default.html" class="btn btn-lg btn-gradient-01">
-                            Acceder
-                        </a>
-                    </div>
                     <div class="register">
                         ¿No posees una cuenta?
                         <br>
